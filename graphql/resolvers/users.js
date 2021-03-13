@@ -44,7 +44,6 @@ module.exports = {
       // validate user data
       const { valid, errors } = validateRegisterInput(username, email, password, confirmPassword)
       if(!valid) {
-        console.log(errors)
         throw new UserInputError('Errors', { errors })
       }
       // make sure user doesnt already exists
